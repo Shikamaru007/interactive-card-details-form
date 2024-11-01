@@ -4,9 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
     <title>Interactive card details form</title>
 </head>
 <body>
-    
+    <main class="container">
+
+        <section class="card">
+            <img src="images/bg-main-mobile.png" alt="backgrund image" class="mobileBG">
+
+            <div class="frontCardContainer">
+                <img src="images/bg-card-front.png" alt="card front image" class="card-front">
+                <div class="front-card-details">
+                    <img src="images/card-logo.svg" alt="card logo" class="card-logo">
+                    <div class="cardNumberDisplay" id="cardNumberDisplay">0000 0000 0000 0000</div>
+                    <div class="cardDetailsDisplay">
+                        <span class="cardNameDisplay" id="cardNameDisplay">JANE APPLESEED</span>
+                        <span class="cardExpiryDateDisplay"><span id="cardMonthDisplay">00</span>/<span id="cardYearDisplay">00</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="backCardContainer">
+                <img src="images/bg-card-back.png" alt="card back image" class="card-back">
+                <div class="back-card-details">
+                    <span class="cardCvcDisplay" id="cardCvcDisplay">000</span>
+                </div>
+            </div>
+        </section>
+        <section class="details">
+            <form action="\" method="post" class="cardForm">
+                <div class="card-name">
+                    <label for="cardName" class="label">cardholder name</label>
+                    <div class="inputWrapper">
+                        <input type="text" id="cardName" class="input-field" placeholder="e.g. Jane Appleseed">
+                    </div>
+                </div>
+                <div class="card-number">
+                    <label for="cardNumber" class="label">card number</label>
+                    <div class="inputWrapper">
+                        <input type="text" id="cardNumber" class="input-field" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+                    </div>
+                    <span class="errorMsg">Wrong format, numbers only</span>
+                </div>
+                <div class="other-details">
+                    <div class="expiry-date">
+                        <label for="expiryDate" class="label">exp.date (mm/yy)</label>
+                        <div class="expiryDateInputs">
+                            <div class="inputWrapper">
+                                <input type="text" id="expiryDateMonth" class="input-field" placeholder="MM" maxlength="2">
+                            </div>
+                            <div class="inputWrapper">
+                                <input type="text" id="expiryDateYear" class="input-field" placeholder="YY" maxlength="2">
+                            </div>
+                        </div>
+                        <span class="errorMsg">Can't be blank</span>
+                    </div>
+                    <div class="cvc">
+                        <label for="cvc" class="label">CVC</label>
+                        <div class="inputWrapper">
+                            <input type="text" id="cvc" class="input-field" placeholder="e.g. 123" maxlength="3">
+                        </div>
+                        <span class="errorMsg">Can't be blank</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn" id="btn">Confirm</button>
+            </form>
+        </section>
+
+    </main>    
 </body>
 </html>
