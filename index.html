@@ -12,6 +12,7 @@
 
         <section class="card">
             <img src="images/bg-main-mobile.png" alt="backgrund image" class="mobileBG">
+            <img src="images/bg-main-desktop.png" alt="desktopBG" class="desktopBG">
 
             <div class="frontCardContainer">
                 <img src="images/bg-card-front.png" alt="card front image" class="card-front">
@@ -32,13 +33,14 @@
                 </div>
             </div>
         </section>
-        <section class="details">
-            <form action="\" method="post" class="cardForm">
+        <section class="details" id="details">
+            <form action="\" method="post" class="cardForm" id="cardForm">
                 <div class="card-name">
                     <label for="cardName" class="label">cardholder name</label>
                     <div class="inputWrapper">
-                        <input type="text" id="cardName" class="input-field" placeholder="e.g. Jane Appleseed">
+                        <input type="text" id="cardName" class="input-field" placeholder="e.g. Jane Appleseed" maxlength="30">
                     </div>
+                    <span class="errorMsg">Can't be blank</span>
                 </div>
                 <div class="card-number">
                     <label for="cardNumber" class="label">card number</label>
@@ -70,6 +72,12 @@
                 </div>
                 <button type="submit" class="btn" id="btn">Confirm</button>
             </form>
+            <section class="successMsg">
+                <img src="images/icon-complete.svg" alt="check icon">
+                <span>THANK YOU!</span>
+                <p>We've added your card details</p>
+                <button class="btn" id="continue">Continue</button>
+            </section>
         </section>
 
     </main>    
