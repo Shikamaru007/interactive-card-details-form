@@ -42,7 +42,7 @@ body {
 .label {
     color: hsl(278, 68%, 11%);
     text-transform: uppercase;
-    font-size: clamp(.65rem, 1.6vw, .9rem);
+    font-size: clamp(.65rem, 1.6vw, .75rem);
     letter-spacing: 2px;
     font-weight: 600;
 }
@@ -57,10 +57,19 @@ body {
     color: hsl(278, 68%, 11%);
     background-clip: padding-box;
     font-weight: 500;
+    cursor: pointer;
 }
 .input-field:focus{
     border: none;
     outline: none;    
+}
+.input-field:hover{
+    border: 1px solid hsl(270, 3%, 70%);
+   
+}
+.input-field:focus:hover{
+    border: none;
+   
 }
 .input-field::placeholder{
     color: hsl(270, 3%, 87%);
@@ -124,6 +133,7 @@ body {
     font-weight: 500;
     border-radius: 10px;
     margin-top: .5rem;
+    cursor: pointer;
 }
 .btn:hover {
     background-color: hsl(278, 68%, 21%);
@@ -179,13 +189,13 @@ body {
     font-weight: 500;
     text-align: center;
     letter-spacing: .1em;
-    font-size: clamp(.8rem, 4.8vw, 2rem);
+    font-size: clamp(.8rem, 4.3vw, 2rem);
 }
 .cardDetailsDisplay{
     display: flex;
     justify-content: space-between;
     font-size: clamp(.5rem, 2.5vw, 1.5rem);
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -200,7 +210,7 @@ body {
     padding-inline: 3%;
     align-items: center;
     font-size: clamp(.5rem, 2.8vw, 1rem);
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: .1em;
 }
 .errorMsg{
@@ -221,6 +231,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    margin: auto;
 }
 .successMsg span {
     color: hsl(278, 68%, 11%);
@@ -232,7 +243,7 @@ body {
 }
 .successMsg img {
     max-width: 6rem;
-    width: 4rem;
+    width: 4rem;  
 }
 .desktopBG{
     display: none;
@@ -279,14 +290,14 @@ body {
         bottom: auto;
         left: auto;
         right: -20%;
-        top: 15%;
+        top: 18%;
         max-width: 475px;
     }
     .backCardContainer{
         top: auto;
         width: 95%;
         right: -40%;
-        bottom: 15%;
+        bottom: 18%;
         max-width: 475px;
     }
     .mobileBG{
@@ -296,14 +307,14 @@ body {
         display: flex;
     }
     .cardNumberDisplay{
-        font-size: 1rem;
+        font-size: clamp(1rem, 2.2vw, 1.5rem);
     }
     .cardDetailsDisplay{
-        font-size: .5rem;
+        font-size: clamp(.7rem, 1vw, 1rem);
         
     }
     .back-card-details{
-        font-size: .5rem;
+        font-size: clamp(.7rem, 1vw, 1rem);
     }
     .card{
         flex: 1;
@@ -316,19 +327,14 @@ body {
 
 @media screen and (min-width:1200px){
     .details{
-        max-width: 660px;
-        margin-left: auto;
-    }
-}
-
-@media screen and (min-width:1360px){
-    .details{
         max-width: 80%;
         margin-left: auto;
         padding: 5rem;
         justify-content: center;
     }
     .cardForm{
-        max-width: 520px;
+        max-width: 424px;
     }
 }
+
+

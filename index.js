@@ -115,10 +115,15 @@ function validateExpiryDate(year, month){
     year+= 2000;
 
     const userExpiryDate = new Date(year, month - 1);
+    const todayDate = new Date()
 
     if(year !== userExpiryDate.getFullYear() || month - 1 !== userExpiryDate.getMonth()){
         return false;
-    }else {
+    }
+    else if(year < todayDate.getFullYear() || (year == todayDate.getFullYear() && month - 1 <= todayDate.getMonth())){
+        return false;
+    }
+    else {
         return true;
     }
 }
